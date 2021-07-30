@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD: codecamp
+      PGDATA: /var/lib/postgresql/data/pgdata
+
+volumes:
+  postgresdata:
+    driver: local
