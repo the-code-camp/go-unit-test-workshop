@@ -7,5 +7,5 @@ func main() {
 }
 
 func sum(a, b int) int {
-	return 30
+	return a + b
 }
